@@ -75,7 +75,10 @@ function App() {
 
         </header>
       </div>
-
+      <div style={{display:"flex",flexDirection:"row",justifyContent:"end",margin:"20px"}}>
+      <button style={{ fontWeight: "bold",backgroundColor:"#DCDCDC",color:"grey" }}  >Back</button>
+      <button style={{ fontWeight: "bold",backgroundColor:" 	#0000CD" }}  >Finish</button>
+      </div>
     </div>
   );
 }
