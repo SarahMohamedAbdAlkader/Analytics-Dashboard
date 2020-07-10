@@ -65,9 +65,9 @@ function DragNDrop({ data }) {
                     < div key={grp.title} onDragEnter={dragging && !grp.items.length ? (e) => handleDragEnter(e, { grpI, itemI: 0 }) : null} className='dnd-group' style={{ width: grp.width }}>
                         {grp.items.map((item, itemI) => (
                             <div draggable key={item} onDragStart={(e) => handletDragStart(e, { grpI, itemI })} onDragEnter={dragging ? (e) => { handleDragEnter(e, { grpI, itemI }) } : null} className={dragging ? getStyles({ grpI, itemI }) : "dnd-item"} >
-                                <span draggable style={{ width: "100%", height: "300px", textAlign: "center", justifyContent: "center" }}> {item === '1' ? <AddChart /> : item === '2' ? <PieChart /> : <i className="fa fa-plus"></i>}
+                                <div draggable style={{ width: "100%", textAlign: "center", justifyContent: "center" }}> {item === '1' ? <AddChart /> : item === '2' ? <PieChart /> : <i className="fa fa-plus-circle" style={{fontSize:"50px",textAlign:"center"}}></i>}
 
-                                </span>
+                                </div>
                             </div>
                         ))}
                     </div>

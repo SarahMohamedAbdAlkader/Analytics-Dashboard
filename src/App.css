@@ -29,6 +29,9 @@
   margin:3rem;
   background-color: "none";
 }
+.bg{
+  background-image: url('./bg.jpg');
+}
 .dnd-item {
   display: flex;
   justify-content: center;
@@ -41,7 +44,7 @@
   background-color: white;
 
 }
-button{
+#AddButton{
   border: 2px solid gray;background-color: white;padding: 15px;
   font-size: 18px;
   margin-left: 12px;

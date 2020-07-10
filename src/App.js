@@ -10,7 +10,7 @@ const defaultData = [
   { title: 'group 2', items: items_2, width: ['250px'] },
   { title: 'group 3', items: items_3, width: ['600px'] }
 ]
-let i = "12";
+
 function App() {
   const [data, setData] = useState();
   const [state, setState] = useState(false);
@@ -56,6 +56,8 @@ function App() {
     setData(defaultData)
     localStorage.setItem('List', JSON.stringify(defaultData))
   }
+  const finish=()=>{alert("Done")
+  console.log("done")}
 
   return (
     <div >
@@ -63,21 +65,21 @@ function App() {
         <a style={{ color: "white", textDecoration: "none", margin: "2rem" }} href="/">dashabang </a>
       </nav>
       <h3 class="w3-container" style={{ fontWeight: "bold" }}>{state ? <Results /> : header} <i onClick={e => changeText(e.target.value)} className="fa fa-edit"></i></h3>
-      <div style={{ backgroundColor: "#886979d2", border: "2px solid  #301f27d2" }} >
+      <div class="bg"style={{ backgroundColor: "#cecece", border: "2px solid  #301f27d2" }} >
 
 
         <header className="App-header w3-panel">
           <div style={{ display: "" }}>
-            <button style={{ fontWeight: "bold",marginLeft: "50px" }} onClick={onAddLayout} >New Widget <i className="fa fa-plus"></i></button>
+            <button id="AddButton"style={{ fontWeight: "bold",marginLeft: "50px" }} onClick={onAddLayout} >New Widget <i className="fa fa-plus"></i></button>
             <em><h2 style={{ textAlign: "center", fontWeight: "bold", color: " #36242dd2" }}>Drag a widget into an open slot</h2></em>
           </div>
-          <DragNDrop data={data} />
+          <DragNDrop  data={data} />
 
         </header>
       </div>
       <div style={{display:"flex",flexDirection:"row",justifyContent:"end",margin:"20px"}}>
-      <button style={{ fontWeight: "bold",backgroundColor:"#DCDCDC",color:"grey" }}  >Back</button>
-      <button style={{ fontWeight: "bold",backgroundColor:" 	#0000CD" }}  >Finish</button>
+      <button  onClick={()=>alert("Back is disabled now")} style={{ fontSize:"20px",padding:"10px",margin:"10px",fontWeight: "bold",backgroundColor:"#DCDCDC",color:"grey",borderRadius:"5px" }}  >Back</button>
+      <button onClick={finish} style={{fontSize:"20px",padding:"10px",margin:"10px", fontWeight: "bold",backgroundColor:"#2327d7",color:"white",borderRadius:"5px" }}  >Finish</button>
       </div>
     </div>
   );
