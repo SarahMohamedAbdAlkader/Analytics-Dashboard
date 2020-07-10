@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.drag-n-drop {
+  padding: .5rem;
+  display: grid;
+  gap: .5rem;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(auto-fill, 300px);
+  align-items: start;
+}
+.dnd-group {
+  
+  border-radius: 3px;
+  margin:3rem;
+  background-color: "none";
+}
+.dnd-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  border: 3px solid #301f27d2;
+  border-radius: 3px;
+  color: #301f27d2;
+  font-weight: bold;
+  background-color: white;
+
+}
+button{
+  border: 2px solid gray;background-color: white;padding: 15px;
+  font-size: 18px;
+  margin-left: 12px;
+  border-radius:5px;
+  background-color: #472838d2;
+  border:3px solid #412634d2;
+  color:white;
+}
+
+.dnd-item:not(:last-of-type) {
+  margin-bottom: .9rem;
+  background-color:white;
+}
+.dnd-item * {  
+  margin: 0;
+  font-size: 1.2rem;
+}
+.group-title {
+  text-align: left;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+}
+.current {
+  background-color: #282c34;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
